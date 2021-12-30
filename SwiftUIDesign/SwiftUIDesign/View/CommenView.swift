@@ -10,21 +10,19 @@ import SwiftUI
 struct CircleWithEllipse: View {
     
     var xOffsetRight: Bool
-    var mainColor: Color
     var offColor: Color
     
     var body: some View {
         ZStack {
             Circle()
-                .fill(mainColor)
-                .frame(width: 140, height: 140, alignment: .center)
-            Circle()
                 .offset(x: xOffsetRight ? 60 : -60, y: 60)
                 .fill(offColor)
                 .frame(width: 140, height: 140)
         }
+        .background(xOffsetRight ? Color.stCustomWhite : Color.stLightYellow)
         .cornerRadius(70)
     }
+    
 }
 
 struct EntryFiled: View {
@@ -103,9 +101,9 @@ struct CircleDesign: View {
                 .fill(Color.stDarkBlue)
                 .offset(x: -90, y: -195)
                 .frame(width: 200, height: 80)
-            CircleWithEllipse(xOffsetRight: true, mainColor: .stCustomWhite, offColor: .stLightGreen)
+            CircleWithEllipse(xOffsetRight: true, offColor: .stLightGreen)
                 .offset(x: 70, y: -205)
-            CircleWithEllipse(xOffsetRight: false, mainColor: .stLightYellow, offColor: .stLightGreen)
+            CircleWithEllipse(xOffsetRight: false, offColor: .stLightGreen)
                 .offset(x: 205, y: -205)
             Circle()
                 .fill(Color.stLightGreen)
