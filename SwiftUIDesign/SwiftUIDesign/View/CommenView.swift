@@ -125,7 +125,7 @@ struct SignUpCircleView: View {
             .frame(width: 150, height: 200)
         Circle()
             .fill(Color.stLightYellow)
-            .offset(x: 220, y: 400)
+            .offset(x: 200, y: 430)
             .frame(width: 150, height: 120)
     }
     

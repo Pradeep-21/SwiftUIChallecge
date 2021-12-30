@@ -51,7 +51,7 @@ struct SignUpView: View {
                 Spacer()
                 Group {
                     HStack {
-                        Text("Already have an account?")
+                        Text("Already Have An Account?")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                         Spacer()

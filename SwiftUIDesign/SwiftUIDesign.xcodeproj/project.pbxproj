@@ -19,11 +19,6 @@
 		8123C254277776FE007E8913 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123C253277776FE007E8913 /* LoginPage.swift */; };
 		8123C25627777962007E8913 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123C25527777962007E8913 /* Extension.swift */; };
 		81291B21277C6EFB00390F2B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291B20277C6EFB00390F2B /* SignUpView.swift */; };
-		81291B23277C90CF00390F2B /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81291B22277C90CF00390F2B /* DancingScript-VariableFont_wght.ttf */; };
-		81291B28277C910100390F2B /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81291B24277C910000390F2B /* DancingScript-Medium.ttf */; };
-		81291B29277C910100390F2B /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81291B25277C910000390F2B /* DancingScript-Bold.ttf */; };
-		81291B2A277C910100390F2B /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81291B26277C910000390F2B /* DancingScript-SemiBold.ttf */; };
-		81291B2B277C910100390F2B /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81291B27277C910100390F2B /* DancingScript-Regular.ttf */; };
 		81291B2D277C9D4C00390F2B /* CommenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81291B2C277C9D4B00390F2B /* CommenView.swift */; };
 		81E4D7FA277CCBA4004562DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4D7F9277CCBA4004562DA /* LoginViewModel.swift */; };
 		81E4D7FE277CCC85004562DA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E4D7FD277CCC85004562DA /* SignUpViewModel.swift */; };
@@ -64,12 +59,11 @@
 		8123C25527777962007E8913 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		81291B1E277C6E2800390F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		81291B20277C6EFB00390F2B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		81291B22277C90CF00390F2B /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-VariableFont_wght.ttf"; path = "../../../../../../Downloads/Dancing_Script 2/DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		81291B24277C910000390F2B /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Medium.ttf"; path = "../../../../../../Downloads/Dancing_Script 2/static/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
-		81291B25277C910000390F2B /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Bold.ttf"; path = "../../../../../../Downloads/Dancing_Script 2/static/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
-		81291B26277C910000390F2B /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-SemiBold.ttf"; path = "../../../../../../Downloads/Dancing_Script 2/static/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
-		81291B27277C910100390F2B /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Regular.ttf"; path = "../../../../../../Downloads/Dancing_Script 2/static/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		81291B2C277C9D4B00390F2B /* CommenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommenView.swift; sourceTree = "<group>"; };
+		8198E1CF277D7A3400842F7E /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Regular.ttf"; path = "../../../SwiftUIDesign/SwiftUIDesign/Font/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		8198E1D0277D7A3400842F7E /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-SemiBold.ttf"; path = "../../../SwiftUIDesign/SwiftUIDesign/Font/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
+		8198E1D1277D7A3400842F7E /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Bold.ttf"; path = "../../../SwiftUIDesign/SwiftUIDesign/Font/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
+		8198E1D2277D7A3400842F7E /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DancingScript-Medium.ttf"; path = "../../../SwiftUIDesign/SwiftUIDesign/Font/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
 		81E4D7F9277CCBA4004562DA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		81E4D7FD277CCC85004562DA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		81E4D7FF277CD056004562DA /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -124,11 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				81291B1E277C6E2800390F2B /* Info.plist */,
-				81291B22277C90CF00390F2B /* DancingScript-VariableFont_wght.ttf */,
-				81291B25277C910000390F2B /* DancingScript-Bold.ttf */,
-				81291B24277C910000390F2B /* DancingScript-Medium.ttf */,
-				81291B27277C910100390F2B /* DancingScript-Regular.ttf */,
-				81291B26277C910000390F2B /* DancingScript-SemiBold.ttf */,
+				8198E1D1277D7A3400842F7E /* DancingScript-Bold.ttf */,
+				8198E1D2277D7A3400842F7E /* DancingScript-Medium.ttf */,
+				8198E1CF277D7A3400842F7E /* DancingScript-Regular.ttf */,
+				8198E1D0277D7A3400842F7E /* DancingScript-SemiBold.ttf */,
 				81E4D7FB277CCC23004562DA /* ViewModel */,
 				81E4D7FC277CCC45004562DA /* View */,
 				8123C25527777962007E8913 /* Extension.swift */,
@@ -291,13 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81291B23277C90CF00390F2B /* DancingScript-VariableFont_wght.ttf in Resources */,
-				81291B2A277C910100390F2B /* DancingScript-SemiBold.ttf in Resources */,
 				8123C22C277776C9007E8913 /* Preview Assets.xcassets in Resources */,
-				81291B2B277C910100390F2B /* DancingScript-Regular.ttf in Resources */,
 				8123C229277776C9007E8913 /* Assets.xcassets in Resources */,
-				81291B28277C910100390F2B /* DancingScript-Medium.ttf in Resources */,
-				81291B29277C910100390F2B /* DancingScript-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
