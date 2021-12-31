@@ -19,6 +19,7 @@ struct SignUpView: View {
                 .ignoresSafeArea()
             VStack {
                 Spacer()
+                    .frame(height: 50)
                 HStack {
                     Text("Hello...!")
                         .font(Font.custom("DancingScript-Bold", size: 55))
@@ -67,6 +68,7 @@ struct SignUpView: View {
                     }
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
             SignUpCircleView()
         }
     }

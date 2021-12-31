@@ -9,23 +9,28 @@ import SwiftUI
 
 struct CircleWithEllipse: View {
     
+    var xOffset: CGFloat
+    var yOffset: CGFloat
     var xOffsetRight: Bool
-    var offColor: Color
+    var ellipseColor: Color
+    var width: CGFloat
+    var height: CGFloat
     
     var body: some View {
         ZStack {
             Circle()
-                .offset(x: xOffsetRight ? 60 : -60, y: 60)
-                .fill(offColor)
-                .frame(width: 140, height: 140)
+                .offset(x: xOffset, y: yOffset)
+                .fill(ellipseColor)
+                .frame(width: width, height: height)
         }
         .background(xOffsetRight ? Color.stCustomWhite : Color.stLightYellow)
-        .cornerRadius(70)
+        .cornerRadius(height / 2)
     }
     
 }
 
 struct EntryFiled: View {
+    @FocusState private var focus: String?
     
     var placeHolder: String
     var backgroundColor: Color
@@ -41,9 +46,14 @@ struct EntryFiled: View {
             .cornerRadius(30)
             .foregroundColor(.stCustomWhite)
             .textInputAutocapitalization(.never)
+            .focused($focus, equals: text)
 //            .clearButton(text: $text)
         Spacer()
             .frame(height: 20)
+    }
+    
+    private func endediting() {
+        focus = nil
     }
     
 }
@@ -73,43 +83,60 @@ struct CircleDesign: View {
     
     var body: some View {
         Group {
-            Circle()
-                .fill(Color.stLightYellow)
-                .offset(x: -190, y: -395)
-                .frame(width: 330, height: 300)
-            Rectangle()
-                .fill(Color.stDarkBlue)
-                .offset(x: -35, y: -450)
-                .frame(width: 130, height: 140)
-            Circle()
-                .fill(Color.stLightGreen)
-                .offset(x: -35, y: -305)
-                .frame(width: 130, height: 120)
-            Circle()
-                .fill(Color.stLightOrange)
-                .offset(x: -35, y: -400)
-                .frame(width: 160, height: 140)
-            Circle()
-                .fill(Color.stLightPink)
-                .offset(x: 135, y: -430)
-                .frame(width: 250, height: 200)
-            Circle()
-                .fill(Color.stLightOrange)
-                .offset(x: -180, y: -200)
-                .frame(width: 160, height: 140)
-            Circle()
-                .fill(Color.stDarkBlue)
-                .offset(x: -90, y: -195)
-                .frame(width: 200, height: 80)
-            CircleWithEllipse(xOffsetRight: true, offColor: .stLightGreen)
-                .offset(x: 70, y: -205)
-            CircleWithEllipse(xOffsetRight: false, offColor: .stLightGreen)
+            CustomCircle(color: .stLightYellow, xOffset: -190, yOffset: -395, width: 330, height: 300)
+            
+            CustomRectangle(color: .stDarkBlue, xOffset: -35, yOffset: -450, width: 130, height: 140)
+            
+            CustomCircle(color: .stLightGreen, xOffset: -35, yOffset: -305, width: 130, height: 120)
+            
+            CustomCircle(color: .stLightOrange, xOffset: -35, yOffset: -400, width: 160, height: 140)
+           
+            CustomCircle(color: .stLightPink, xOffset: 135, yOffset: -430, width: 250, height: 200)
+            
+            CustomCircle(color: .stLightOrange, xOffset: -180, yOffset: -200, width: 160, height: 140)
+            
+            CustomCircle(color: .stDarkBlue, xOffset: -90, yOffset: -195, width: 200, height: 80)
+            
+            CircleWithEllipse(xOffset: 60, yOffset: 60, xOffsetRight: true, ellipseColor: .stLightGreen, width: 140, height: 140)
+                .offset(x: 65, y: -205)
+            CircleWithEllipse(xOffset: -60, yOffset: 60, xOffsetRight: false, ellipseColor: .stLightGreen, width: 140, height: 140)
                 .offset(x: 205, y: -205)
-            Circle()
-                .fill(Color.stLightGreen)
-                .offset(x: 130, y: -300)
-                .frame(width: 200, height: 175)
+            CustomCircle(color: .stLightGreen, xOffset: 130, yOffset: -300, width: 200, height: 175)
         }
+    }
+    
+}
+
+struct CustomCircle: View {
+    
+    var color: Color
+    var xOffset: CGFloat
+    var yOffset: CGFloat
+    var width: CGFloat
+    var height: CGFloat
+    
+    var body: some View {
+        Circle()
+            .fill(color)
+            .offset(x: xOffset, y: yOffset)
+            .frame(width: width, height: height)
+    }
+    
+}
+
+struct CustomRectangle: View {
+    
+    var color: Color
+    var xOffset: CGFloat
+    var yOffset: CGFloat
+    var width: CGFloat
+    var height: CGFloat
+    
+    var body: some View {
+        Rectangle()
+            .fill(color)
+            .offset(x: xOffset, y: yOffset)
+            .frame(width: width, height: height)
     }
     
 }

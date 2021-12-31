@@ -49,7 +49,8 @@ struct LoginView: View {
                                 //
                             } label: {
                                 Text("Forgot password?")
-                                    .fontWeight(.bold)
+                                    .font(.custom("FontsFree-Net-Rustic-Printed", size: 20))
+//                                    .fontWeight(.bold)
                                     .padding(.trailing, 25)
                                     .foregroundColor(.white)
                             }
@@ -63,7 +64,8 @@ struct LoginView: View {
                                 //
                             } label: {
                                 Text("Login")
-                                    .fontWeight(.semibold)
+                                    .font(.custom("FontsFree-Net-Rustic-Printed", size: 18))
+                                    .fontWeight(.bold)
                                     .padding()
                                     .frame(width: 150)
                                     .background(Color.stLightOrange)
@@ -77,6 +79,7 @@ struct LoginView: View {
                     Group {
                         HStack {
                             Text("New User?")
+                                .font(.custom("FontsFree-Net-Tungsten-Bold", size: 18))
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                             Spacer()
@@ -88,6 +91,7 @@ struct LoginView: View {
                                     loginVM.isSignUp = true
                                 } label: {
                                     Text("SignUp")
+                                        .font(.custom("FontsFree-Net-Tungsten-Bold", size: 18))
                                         .foregroundColor(.stLightOrange)
                                         .fontWeight(.bold)
                                 }
