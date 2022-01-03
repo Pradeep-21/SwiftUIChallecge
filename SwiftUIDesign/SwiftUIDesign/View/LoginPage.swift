@@ -49,8 +49,7 @@ struct LoginView: View {
                                 //
                             } label: {
                                 Text("Forgot password?")
-                                    .font(.custom("FontsFree-Net-Rustic-Printed", size: 20))
-//                                    .fontWeight(.bold)
+                                    .font(.system(size: 20, weight: .semibold, design: .default))
                                     .padding(.trailing, 25)
                                     .foregroundColor(.white)
                             }
@@ -60,17 +59,8 @@ struct LoginView: View {
                         NavigationLink(isActive: $loginVM.isLogin) {
                             Text("Login")
                         } label: {
-                            Button {
+                            CustomButton(text: "Login", icon: nil, color: .stLightOrange, radiuds: 30) {
                                 //
-                            } label: {
-                                Text("Login")
-                                    .font(.custom("FontsFree-Net-Rustic-Printed", size: 18))
-                                    .fontWeight(.bold)
-                                    .padding()
-                                    .frame(width: 150)
-                                    .background(Color.stLightOrange)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(30)
                             }
                         }
                         Spacer()
@@ -79,7 +69,6 @@ struct LoginView: View {
                     Group {
                         HStack {
                             Text("New User?")
-                                .font(.custom("FontsFree-Net-Tungsten-Bold", size: 18))
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                             Spacer()
@@ -90,8 +79,8 @@ struct LoginView: View {
                                 Button {
                                     loginVM.isSignUp = true
                                 } label: {
-                                    Text("SignUp")
-                                        .font(.custom("FontsFree-Net-Tungsten-Bold", size: 18))
+                                    Text("Signup")
+                                        .font(.system(size: 22, weight: .semibold, design: .default))
                                         .foregroundColor(.stLightOrange)
                                         .fontWeight(.bold)
                                 }

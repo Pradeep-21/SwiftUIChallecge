@@ -46,8 +46,7 @@ struct EntryFiled: View {
             .cornerRadius(30)
             .foregroundColor(.stCustomWhite)
             .textInputAutocapitalization(.never)
-            .focused($focus, equals: text)
-//            .clearButton(text: $text)
+            .disableAutocorrection(true)
         Spacer()
             .frame(height: 20)
     }
@@ -72,7 +71,8 @@ struct PasswordTextFiled: View {
             .background(Color.stLightBlue)
             .foregroundColor(.stCustomWhite)
             .cornerRadius(30)
-//            .clearButton(text: $text)
+            .disableAutocorrection(true)
+            .textInputAutocapitalization(.never)
         Spacer()
             .frame(height: 20)
     }
@@ -99,8 +99,10 @@ struct CircleDesign: View {
             
             CircleWithEllipse(xOffset: 60, yOffset: 60, xOffsetRight: true, ellipseColor: .stLightGreen, width: 140, height: 140)
                 .offset(x: 65, y: -205)
+            
             CircleWithEllipse(xOffset: -60, yOffset: 60, xOffsetRight: false, ellipseColor: .stLightGreen, width: 140, height: 140)
                 .offset(x: 205, y: -205)
+            
             CustomCircle(color: .stLightGreen, xOffset: 130, yOffset: -300, width: 200, height: 175)
         }
     }
@@ -170,6 +172,7 @@ struct PickerTextField: View {
                 .frame(width: kWidth - 50)
                 .foregroundColor(.stCustomWhite)
                 .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
                 .background(Color.stLightBlue)
                 .cornerRadius(30)
             Button {
@@ -186,4 +189,27 @@ struct PickerTextField: View {
             .frame(height: 20)
     }
     
+}
+
+struct CustomButton: View {
+    var text: String
+    var icon: Image?
+    var color: Color
+    var radiuds: CGFloat
+    var clicked: (() -> Void) /// use closure for callback
+    
+    var body: some View {
+        Button(action: clicked) { /// call the closure here
+            HStack {
+                Text(text) /// your text
+                    .font(.system(size: 25))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                icon /// your icon image
+            }
+            .frame(width: 150, height: 60)
+            .background(color)
+            .cornerRadius(radiuds)
+        }
+    }
 }
