@@ -64,7 +64,7 @@ struct SignUpView: View {
                 }
             }
             CustomCircle(color: .stLightOrange, xOffset: -220, yOffset: 400, width: 150, height: 200)
-            CustomCircle(color: .stLightYellow, xOffset: 230, yOffset: 430, width: 150, height: 120)
+            CustomCircle(color: .stLightYellow, xOffset: 210, yOffset: 410, width: 150, height: 120)
         }
     }
 }
