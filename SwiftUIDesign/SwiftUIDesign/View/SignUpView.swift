@@ -13,7 +13,7 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            Color.stDarkBlue
+            Color.stBackgroundBlue
                 .ignoresSafeArea()
             GeometryReader { geometry in
                 ScrollView {
@@ -23,13 +23,13 @@ struct SignUpView: View {
                         Group {
                             HStack {
                                 Text("Hello...!")
-                                    .font(Font.custom("DancingScript-Bold", size: 55))
+                                    .font(.pacifico(size: 45))
                                     .foregroundColor(.stCustomWhite)
                                     .padding(.leading, 25)
                                 Spacer()
                             }
                             Spacer()
-                                .frame(height: 60)
+                                .frame(height: 40)
                         }
                         Group {
                             EntryFiled(placeHolder: "First name", backgroundColor: .stLightBlue, text: $signUpVM.firstName)
@@ -46,13 +46,15 @@ struct SignUpView: View {
                         Spacer()
                         Group {
                             HStack {
-                                Text("Already Have An Account?")
+                                Text("Already Have An Account ?")
+                                    .font(.oswald(size: 18))
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
                                 Button {
                                     //
                                 } label: {
                                     Text("Login")
+                                        .font(.oswald(size: 22))
                                         .foregroundColor(.stLightOrange)
                                         .fontWeight(.bold)
                                 }
@@ -63,8 +65,8 @@ struct SignUpView: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
                 }
             }
-            CustomCircle(color: .stLightOrange, xOffset: -220, yOffset: 400, width: 150, height: 200)
-            CustomCircle(color: .stLightYellow, xOffset: 210, yOffset: 410, width: 150, height: 120)
+            CustomCircle(color: .stLightOrange, xOffset: -205, yOffset: 420, width: 150, height: 200)
+            CustomCircle(color: .stLightYellow, xOffset: 210, yOffset: 450, width: 150, height: 140)
         }
     }
 }

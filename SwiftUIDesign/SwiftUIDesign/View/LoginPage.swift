@@ -22,22 +22,20 @@ struct LoginView: View {
                 CircleDesign()
                 VStack {
                     Spacer()
-                    Group {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text("Welcome")
-                                    .font(.custom("DancingScript-Bold", size: 55.0))
-                                    .foregroundColor(.white)
-                                Spacer()
-                                    .frame(height: 5)
-                                Text("Back")
-                                    .font(.custom("DancingScript-Bold", size: 55.0))
-                                    .foregroundColor(.white)
-                            }
-                            .padding(.leading, 35)
-                            Spacer()
-                        }
+                    VStack(spacing: 0) {
+                        Text("Welcome")
+                            .padding(.bottom,0)
+                            .font(.pacifico(size: 45))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 30)
+                        Text("Back")
+                            .padding(.top,0)
+                            .font(.pacifico(size: 45))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    .padding(.leading, 25)
                     Group {
                         Spacer()
                             .frame(height: 25)
@@ -49,7 +47,7 @@ struct LoginView: View {
                                 //
                             } label: {
                                 Text("Forgot password?")
-                                    .font(.system(size: 20, weight: .semibold, design: .default))
+                                    .font(.custom("Oswald-Regular", size: 20.0))
                                     .padding(.trailing, 25)
                                     .foregroundColor(.white)
                             }
@@ -68,7 +66,8 @@ struct LoginView: View {
                     }
                     Group {
                         HStack {
-                            Text("New User?")
+                            Text("New User ?")
+                                .font(.custom("Oswald-Regular", size: 18.0))
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                             Spacer()
@@ -80,7 +79,7 @@ struct LoginView: View {
                                     loginVM.isSignUp = true
                                 } label: {
                                     Text("Signup")
-                                        .font(.system(size: 22, weight: .semibold, design: .default))
+                                        .font(.custom("Oswald-Regular", size: 22.0))
                                         .foregroundColor(.stLightOrange)
                                         .fontWeight(.bold)
                                 }

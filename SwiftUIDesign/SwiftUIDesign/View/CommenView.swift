@@ -37,18 +37,19 @@ struct EntryFiled: View {
     @Binding var text: String
     
     var body: some View {
-        TextField(placeHolder, text: $text)
+        TextField("", text: $text)
+            .font(.oswald(size: 20))
             .placeHolder(isShow: text.isEmpty, placeHolder: placeHolder, color: .stCustomWhite)
             .padding()
             .padding(.leading, 10)
-            .frame(width: kWidth - 50)
+            .frame(width: kWidth - 50, height: 55)
             .background(backgroundColor)
-            .cornerRadius(30)
+            .cornerRadius(27)
             .foregroundColor(.stCustomWhite)
             .textInputAutocapitalization(.never)
             .disableAutocorrection(true)
         Spacer()
-            .frame(height: 20)
+            .frame(height: 25)
     }
     
     private func endediting() {
@@ -63,18 +64,19 @@ struct PasswordTextFiled: View {
     var placeHolder: String
     
     var body: some View {
-        SecureField(placeHolder, text: $text)
+        SecureField("", text: $text)
+            .font(.oswald(size: 25))
             .placeHolder(isShow: text.isEmpty, placeHolder: placeHolder, color: .stCustomWhite)
             .padding()
             .padding(.leading, 10)
-            .frame(width: kWidth - 50)
+            .frame(width: kWidth - 50, height: 55)
             .background(Color.stLightBlue)
             .foregroundColor(.stCustomWhite)
-            .cornerRadius(30)
+            .cornerRadius(27)
             .disableAutocorrection(true)
             .textInputAutocapitalization(.never)
         Spacer()
-            .frame(height: 20)
+            .frame(height: 25)
     }
     
 }
@@ -165,28 +167,29 @@ struct PickerTextField: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            TextField(placeholder, text: $text)
+            TextField("", text: $text)
+                .font(.oswald(size: 20))
                 .placeHolder(isShow: text.isEmpty, placeHolder: placeholder, color: .stCustomWhite)
                 .padding()
-                .padding(.leading, 90)
-                .frame(width: kWidth - 50)
+                .padding(.leading, 100)
+                .frame(width: kWidth - 50, height: 55)
                 .foregroundColor(.stCustomWhite)
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
                 .background(Color.stLightBlue)
-                .cornerRadius(30)
+                .cornerRadius(27)
             Button {
                 //
             } label: {
                 Text("+91")
-                    .foregroundColor(.white)
-                    .frame(width: 80, height: 57)
+                    .foregroundColor(.stCustomWhite)
+                    .frame(width: 90, height: 55)
                     .background(Color.stLightLowBlue)
-                    .cornerRadius(28)
+                    .cornerRadius(27)
             }
         }
         Spacer()
-            .frame(height: 20)
+            .frame(height: 25)
     }
     
 }

@@ -13,7 +13,8 @@ struct SwiftUIDesignApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            SignUpView()
+                .accentColor(.stLightOrange)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

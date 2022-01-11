@@ -23,3 +23,25 @@ extension Color {
     static let stLightLowBlue = Color("lightLowBlue")
 }
 
+extension Font {
+    
+    static var dancingFontBold: Font {
+        return Font.custom("Pacifico-Regular", size: 55)
+    }
+    
+    static func pacifico(size: CGFloat) -> Font {
+        return Font.custom("Pacifico-Regular", size: size)
+    }
+    
+    static func oswald(size: CGFloat) -> Font {
+        return Font.custom("Oswald-Regular", size: size)
+    }
+    
+    static var oswald: Font {
+        return Font.custom("Oswald-Regular", size: 16)
+    }
+    
+    static func lato(size: CGFloat) -> Font {
+        return Font.custom("Lato-Bold", size: size)
+    }
+}
